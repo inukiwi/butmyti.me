@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>But my time?</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<link rel="icon" type="image/png" href="./favicon.png">
+<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.40/moment-timezone.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.40/moment-timezone-with-data.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./main.js"></script>
+<link href="./style.css" rel="stylesheet">
+<body class="mdc-typography">
+    <h1 class="header">But what about my time?</h1>
+    <div id="show-form" style="display: none;">
+      <label class="mdc-text-field">
+        <span class="mdc-text-field__ripple"></span>
+        <input class="mdc-text-field__input" id="time-input" type="time" aria-labelledby="my-label-id" width="100">
+        <span class="mdc-line-ripple"></span>
+      </label>
+      <div class="mdc-select" onclick="makeActive(this)">
+        <div class="mdc-select__anchor demo-width-class">
+          <div class="mdc-select__selected-text"></div>
+          <div class="mdc-line-ripple"></div>
+          <input type="text" id="timezone-input" class="mdc-text-field__input" name="selection">
+        </div>
+        <div class="mdc-select__menu mdc-menu mdc-menu-surface">
+          <div class="autocomplete" id='autocomp' style="width:200px;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <p display="none" id="errorMsg"></p>
+
+    <div id="show-local-time">
+      <p>
+        <span id="src-time"></span> in <span id="src-timezone"></span> is
+      </p>
+      <p><span id="local-time"></span></br>
+        in your local time
+      </p>
+    </div>
+    <div>
+      <div class="mdc-touch-target-wrapper" id="changeButton">
+        <button class="mdc-button mdc-button--touch mdc-button--raised">
+          <span class="mdc-button__ripple"></span>
+          <span class="mdc-button__touch"></span>
+          <span class="mdc-button__label">Change time and zone</span>
+        </button>
+      </div>
+      <div class="mdc-touch-target-wrapper" id="shareButton">
+        <button class="mdc-button mdc-button--touch mdc-button--raised">
+          <span class="mdc-button__ripple"></span>
+          <span class="mdc-button__touch"></span>
+          <span class="mdc-button__label">Copy link</span>
+        </button>
+      </div>
+    </div>
+</body>
+</html>

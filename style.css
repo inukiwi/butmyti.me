@@ -1,0 +1,95 @@
+
+
+html {
+  height: 100%;
+}
+body {
+  --mdc-theme-primary: #ef4136;
+  --mdc-theme-secondary: #ffb300;
+  color: #fff;
+  background: var(--mdc-theme-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100%;
+}
+.header {
+  text-align: center;
+}
+.header h1 {
+  font-size: 3em;
+}
+#show-local-time {
+  text-align: center;
+  font-size: 2em;
+}
+#src-time {
+  font-weight: bold;
+}
+#src-timezone {
+  font-weight: bold;
+}
+#local-time {
+  font-weight: bold;
+  font-size:150%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+input[type=text] {
+  border: none;
+  border-radius: none;
+  width: 100%;
+  padding: 16px;
+  font-size: 2em;
+  z-index: -2;
+}
+
+input[type=time] {
+  border: none;
+  border-radius: none;
+  width: 100%;
+  padding: 16px;
+  font-size: 2em;
+  z-index: -2;
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+  color: #fff;
+}
+
+.mdc-text-field__input {
+  color: #fff;
+}
+
+input[type=text]:active {
+  border: none;
+}
+
+input[type=text]:focus-visible {
+  outline: none;
+}
+
+.mdc_select {
+  width: 250px;
+}
+
+.mdc-select .mdc-select__anchor {
+  padding-left: 0;
+}
+
+button {
+  --mdc-theme-primary: #fafafa;
+  
+}
+.mdc-button__label {
+  color: #000;
+}
